@@ -4,67 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Developer Questions</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .question h3 {
-            color: #2c3e50;
-        }
-        .question .answer {
-            margin: 10px 0;
-        }
-        .question .example {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-left: 4px solid #3498db;
-        }
-        code {
-            background-color: #eef;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            overflow-x: auto;
-        }
-    </style>
-    <script type="module">
-        import questionsData from './data.js';
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('questions-container');
-
-            questionsData.forEach((item, index) => {
-                const questionDiv = document.createElement('div');
-                questionDiv.classList.add('question');
-
-                const questionTitle = document.createElement('h3');
-                questionTitle.textContent = `Question ${index+1}: ${item.question}`;
-
-                const answerDiv = document.createElement('div');
-                answerDiv.classList.add('answer');
-                answerDiv.innerHTML = `<strong>Answer:</strong> ${item.answer}`;
-
-                const exampleDiv = document.createElement('div');
-                exampleDiv.classList.add('example');
-                exampleDiv.innerHTML = `<strong>Example:</strong>
-                <pre><code>${item.example}</code></pre>`;
-
-                questionDiv.appendChild(questionTitle);
-                questionDiv.appendChild(answerDiv);
-                questionDiv.appendChild(exampleDiv);
-
-                container.appendChild(questionDiv);
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
 </head>
 <body>
     <h1>Frontend Developer Questions and Answers</h1>
